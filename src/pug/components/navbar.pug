@@ -1,0 +1,17 @@
+
+-
+  var Logo = './assets/images/logo-primary.png'
+mixin navbar()
+  .wrapper__navbar
+    .container
+      nav.navbar.navbar-expand-lg
+        a.navbar-brand(href='#')
+          img(src=Logo alt='logo')
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarId' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarId.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto.nav-bar__link
+            each item in navbarLink
+              li.nav-item.active
+                a(href=`#${item.link}`)= item.title
+
