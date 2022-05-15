@@ -1,7 +1,8 @@
-.main-title {
-  text-transform: uppercase;
-  font-size: $fs-large;
-  font-weight: $fw-light;
-  color: $blue;
-  margin: $mg-small 0;
+.introduction__title {
+  @include font($textTrans: uppercase, $fs: $fs-large);
+  @include mg($y: 1rem);
+  width: fit-content;
+
+  border-bottom: 10px solid transparent;
+  border-image: url("/assets/images/v-heading.png") 10 stretch;
 }

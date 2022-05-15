@@ -1,2 +1,93 @@
 .footer {
+  margin-top: 2000px;
+
+  &__logo-brand {
+    width: 100%;
+    border-bottom: 1px solid rgba($p-gray, 0.2);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    @include flex($direction: row);
+    @include mg($y: 2rem);
+  }
+
+  &__list {
+    @include flex();
+  }
+
+  &-navigate {
+    @include mg($x: 1.5rem);
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    p {
+      @include mg($y: 1rem);
+      @include font($color: rgba($p-gray, 0.5));
+      &:hover {
+        color: $orange;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__title {
+    @include font($textTrans: uppercase, $fs: $fs-sizable);
+    letter-spacing: 0.4rem;
+  }
+
+  &__item {
+    @include mg($y: 1rem);
+    @include font($textTrans: uppercase, $fs: $fs-light);
+    color: rgba($p-gray, 0.5);
+    display: block;
+  }
+
+  &__input {
+    @include mg($y: 1rem);
+    height: 3rem;
+
+    & > input {
+      width: 85%;
+      height: 100%;
+      @include pd($x: 1rem);
+
+      &::placeholder {
+        font-style: italic;
+      }
+    }
+
+    & > button {
+      @include font($color: $white);
+      @include pd($y: 0, $x: 0.4rem);
+      margin-left: -4px;
+      height: 100%;
+      border: none;
+      background-color: $black;
+    }
+  }
+
+  &__icon-social {
+    & > i {
+      @include font($fs: $fs-base, $color: rgba($p-gray, 0.7));
+      @include mg($x: 0.5rem);
+      cursor: pointer;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+  &__copyright {
+    @include pd($y: 1rem);
+    @include flex($justify: space-between);
+    @include font($fs: $fs-light, $color: rgba($p-gray, 0.7));
+  }
 }

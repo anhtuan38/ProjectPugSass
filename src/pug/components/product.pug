@@ -1,0 +1,17 @@
+mixin product( {data:data} )
+  each item in data
+    .product__image
+      img(src=item.urlImage , alt="product image")
+      img(src="/assets/images/tag1.png", class="product__tag", alt="tag")
+      .product__content
+        h3.product__title= item.title
+        p.main-price.my-3= item.discount
+          span.product__cost= item.cost
+        .button add to cart
+        p.product__description= item.description
+    //- .productImg__comment.d-flex.pt-2
+    //-         p.comment__item.d-flex
+    //-             i.fas.fa-heart  Yêu thích
+    //-         p.comment__item.mx-3.d-flex
+    //-             i.fas.fa-signal  So sánh
+    //-         i.fas.fa-external-link-alt

@@ -13,6 +13,33 @@
   }
 }
 
+@mixin font($fs: $fs-base, $color: "", $fw: "", $textTrans: none) {
+  font-size: $fs;
+  text-transform: $textTrans;
+
+  @if $color != "" {
+    color: $color;
+  }
+  @if $fw != "" {
+    font-weight: $fw;
+  }
+}
+
+@mixin button($fs: $fs-base, $bgColor, $colorText, $textTrans:none, $radius:0) {
+  background-color: $bgColor;
+  color: $colorText;
+  text-transform: $textTrans;
+  font-size: $fs;
+  border-radius: $radius;
+}
+
+@mixin position($prop, $top: null, $left: null, $right: null, $bottom: null) {
+  position: $prop;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
 // flex, grid, position, width height border radius, font, padding, margin,...
 
 $breakpoints: (
@@ -44,4 +71,12 @@ $breakpoints: (
       @content;
     }
   }
+}
+
+@mixin mg($x: 0, $y: 0) {
+  margin: $y $x;
+}
+
+@mixin pd($x: 0, $y: 0) {
+  padding: $y $x;
 }

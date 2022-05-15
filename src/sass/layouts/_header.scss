@@ -1,8 +1,7 @@
 header {
   @include flex($justify: space-between, $align: center);
-  height: 3rem;
+  @include pd($y: 1rem);
   font-size: $fs-light;
-  padding: 1rem 0;
   top: 0;
   left: 0;
   right: 0;
@@ -11,18 +10,14 @@ header {
 
   .header-navigate {
     @include flex($gap: auto);
-    padding-bottom: 10px;
-
 
     &__item {
+      @include mg($x: 1rem);
       position: relative;
-      margin: 0 1rem;
-
 
       &:hover {
-
         &:after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: -5px;
           left: 0;
@@ -59,11 +54,12 @@ header {
 
   .header-search {
     & > input {
+      @include pd($x: 0.5rem, $y: 0.2rem);
+      color: $white;
       background-color: transparent;
       border: none;
       border-left: 1px solid $p-gray;
-      padding: 0.3rem 1rem;
-      margin-right: 1rem;
+
       &:focus-visible {
         outline: none;
       }

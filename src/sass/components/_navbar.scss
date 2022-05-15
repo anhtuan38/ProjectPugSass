@@ -1,17 +1,20 @@
 .wrapper {
-
   &__navbar {
-
     background-color: $black;
     width: 100%;
 
+    .navbar {
+      padding: 0;
+    }
+
     .nav-item {
+      @include mg($x: 1rem);
       font-size: $fs-light;
       color: $white;
       text-transform: uppercase;
-      margin: 0 1rem;
+      position: relative;
 
-      &>a {
+      & > a {
         color: $white;
         text-decoration: none;
       }
@@ -21,9 +24,16 @@
       }
     }
 
-     .nav-bar__link {
-       width: 100%;
-       @include flex($justify: space-between);
-     }
+    .nav-bar__link {
+      width: 100%;
+      @include flex($justify: space-between);
+
+      .nav-item {
+        @include pd($x: 5rem, $y: "auto");
+        &:hover .dropdown {
+          display: block;
+        }
+      }
+    }
   }
 }

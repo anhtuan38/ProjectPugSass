@@ -1,7 +1,11 @@
 .button {
-  width: 33%;
-  margin: 0 -3px;
-  padding: $pd-small;
-  border: none;
-  background-color: $p-gray;
+  @include mg($y: 0.5rem);
+  @include button($bgColor: $black, $colorText: $white, $textTrans: uppercase);
+  @include pd($x: 1rem, $y: 0.5rem);
+  width: fit-content;
+
+  &:hover {
+    background-color: $orange;
+    transition: $transition;
+  }
 }

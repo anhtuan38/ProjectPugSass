@@ -10,7 +10,3 @@ mixin carousel({ data, id })
     button.carousel-control-next(type='button' data-bs-target=`#${id}` data-bs-slide='next')
       span.carousel-control-next-icon(aria-hidden='true')
       span.visually-hidden Next c
-
-mixin ratio({ ratio = 1/1, className })
-  div(class=className style=`--aspect-ratio: ${ratio}`)
-    block

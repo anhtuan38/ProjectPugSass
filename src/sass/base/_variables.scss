@@ -15,17 +15,6 @@ $site-width: 1280px;
 
 $transition: all 0.3s linear;
 
-// padding
-$pd-smaller: 0.5rem;
-$pd-small: 1rem;
-$pd-medium: 2rem;
-$pd-large: 3rem;
-
-// margin
-$mg-small: 1rem;
-$mg-medium: 2rem;
-$mg-large: 3rem;
-
 // z-index
 $z-negative: -1;
 $z-elevate: 1;
@@ -36,6 +25,7 @@ $z-modal: 500;
 
 // font family
 $ff-playfair: "Playfair Display", serif;
+$ff-roboto: 'Roboto Slab',serif;
 
 //font-weight
 $fw-light: 300;
