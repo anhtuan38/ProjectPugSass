@@ -20,11 +20,10 @@ mixin footer()
             .footer-navigate
               h5.footer__title gửi email
               p Gửi email cho chúng tôi để được hỗ trợ
-              .footer__input
-                .form__input
-                    input(type="email" placeholder="Enter your email")
-                    .button
-                        a(href="#" class="button--link") Gửi
+              .footer__input.d-flex
+                input(type="email" placeholder="Enter your email")
+                .button
+                    a(href="#" class="button--link") Gửi
               .footer__icon-social
                 i.fa-brands.fa-twitter
                 i.fa-brands.fa-google-plus-g
@@ -54,13 +53,3 @@ mixin footer()
           p &copy; Copyright 2008-2014 DKT Technology JSC
           .img
             img(src= cardImage, alt="card")
-
-
-
-
-
-
-
-
-
-
