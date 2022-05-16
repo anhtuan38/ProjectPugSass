@@ -1,6 +1,7 @@
 .introduction__title {
   @include font($textTrans: uppercase, $fs: $fs-large);
-  @include mg($y: 1rem);
+  @include pd($y: 1rem);
+  margin: 2rem auto;
   width: fit-content;
 
   border-bottom: 10px solid transparent;
