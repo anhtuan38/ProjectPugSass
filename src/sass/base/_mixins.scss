@@ -25,22 +25,19 @@
   }
 }
 
-@mixin button($fs: $fs-base, $bgColor, $colorText, $textTrans:none, $radius:0) {
+@mixin button(
+  $fs: $fs-base,
+  $bgColor,
+  $colorText,
+  $textTrans: none,
+  $radius: 0
+) {
   background-color: $bgColor;
   color: $colorText;
   text-transform: $textTrans;
   font-size: $fs;
   border-radius: $radius;
 }
-
-@mixin position($prop, $top: null, $left: null, $right: null, $bottom: null) {
-  position: $prop;
-  top: $top;
-  left: $left;
-  bottom: $bottom;
-  right: $right;
-}
-// flex, grid, position, width height border radius, font, padding, margin,...
 
 $breakpoints: (
   smallphone-and-down: "(max-width: 399px)",

@@ -20,6 +20,7 @@
   }
 
   &-navigate {
+    font-family: $ff-playfair;
     @include mg($x: 1.5rem);
 
     &:first-child {
@@ -27,10 +28,12 @@
     }
     &:last-child {
       margin-right: 0;
+      width: 30%;
     }
     p {
       @include mg($y: 1rem);
       @include font($color: rgba($p-gray, 0.5));
+      line-height: 1.4;
       &:hover {
         color: $orange;
         cursor: pointer;
@@ -40,37 +43,33 @@
 
   &__title {
     @include font($textTrans: uppercase, $fs: $fs-sizable);
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
   }
 
   &__item {
     @include mg($y: 1rem);
     @include font($textTrans: uppercase, $fs: $fs-light);
+    min-width: 13rem;
     color: rgba($p-gray, 0.5);
     display: block;
   }
 
   &__input {
     @include mg($y: 1rem);
-    height: 3rem;
+    @include flex($direction: row);
 
-    & > input {
-      width: 85%;
-      height: 100%;
-      @include pd($x: 1rem);
-
+    input {
       &::placeholder {
+        @include font($fw: $fw-regular);
         font-style: italic;
       }
     }
+    .button {
+      @include mg($x: 0);
 
-    & > button {
-      @include font($color: $white);
-      @include pd($y: 0, $x: 0.4rem);
-      margin-left: -4px;
-      height: 100%;
-      border: none;
-      background-color: $black;
+      & > a {
+        color: $white;
+      }
     }
   }
 
@@ -87,7 +86,7 @@
   }
   &__copyright {
     @include pd($y: 1rem);
-    @include flex($justify: space-between);
+    @include flex($justify: space-between, $align: center);
     @include font($fs: $fs-light, $color: rgba($p-gray, 0.7));
   }
 }

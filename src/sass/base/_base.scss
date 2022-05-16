@@ -4,7 +4,11 @@
   width: fit-content;
 }
 .main-price {
-  @include font($textTrans: uppercase, $fs: $fs-large, $color: $orange);
+  @include font($fs: $fs-large, $color: $orange);
+
+  sup {
+    text-transform: lowercase;
+  }
 }
 
 .detail__image {

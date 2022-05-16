@@ -5,36 +5,27 @@
   background-repeat: no-repeat;
 
   .introduction {
-    @include flex($align: center,$direction: column);
+    @include flex($align: center, $direction: column);
     @include pd($y: 2rem);
 
     .button {
-      @include mg($y:2rem);
+      @include mg($y: 2rem);
     }
 
-    &__title {
-      @include font($textTrans: uppercase, $fs: $fs-large);
-      @include mg($y: 1rem);
-      width: fit-content;
-
-      border-bottom: 10px solid transparent;
-      border-image: url("/assets/images/v-heading.png") 10 stretch;
-    }
 
     &__description {
       text-align: center;
-      line-height: 2  ;
+      line-height: 2;
     }
-
 
     &__product {
       position: relative;
       height: 700px;
       width: 100%;
-      top:50%;
+      top: 50%;
       z-index: 1000;
 
-      &> img {
+      & > img {
         width: 100%;
       }
       .detail__image {
@@ -44,8 +35,6 @@
       }
     }
     &__image {
-
-
       // &::before {
       //     content: " ";
       //     width: 6rem;
@@ -75,48 +64,50 @@
     position: relative;
     height: fit-content;
 
-      .tag {
-        height: 8rem;
-      }
+    .tag {
+      height: 8rem;
+    }
 
-      .detail__content {
-        padding-left: 3rem;
-        height: 100%;
-        border-left: 1px solid #ccc;
+    .detail__content {
+      padding-left: 3rem;
+      height: 100%;
+      border-left: 1px solid #ccc;
+    }
 
-      }
+    .detail__description {
+      line-height: 2;
+      margin-bottom: 3rem;
+    }
 
-      .detail__description {
-        line-height: 2;
-        margin-bottom: 3rem;
-      }
+    .detail__time {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      text-align: center;
 
-      .detail__time {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 100%;
-        text-align: center;
+      &--item {
+        @include pd($y: 2rem);
+        @include font(
+          $textTrans: uppercase,
+          $color: $orange,
+          $fs: $fs-large,
+          $fw: $fw-regular
+        );
+        border: 1px solid $orange;
+        width: 50%;
 
-        &--item {
-          @include pd($y: 2rem);
-          @include font($textTrans: uppercase, $color: $orange, $fs: $fs-large, $fw:$fw-regular);
-          border: 1px solid $orange;
-          width: 50%;
-
-          span {
-            // width: fit-content;
-          }
+        span {
+          // width: fit-content;
         }
       }
     }
-    &__details {
-      @include pd($x: 3rem, $y: 3rem);
-      background-color: $white;
-      position: absolute;
-      top: 50%;
-      left: 5%;
-      width: 90%;
-    }
+  }
+  &__details {
+    @include pd($x: 3rem, $y: 3rem);
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+  }
 }
-
-

@@ -7,17 +7,53 @@
   &__image {
     border: 1px solid #ccc;
     position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+      transition: all 0.5s ease-out;
+
+      .product__info {
+        @include pd($x: 0.5rem);
+        @include flex($justify: space-evenly);
+        @include font($fs:$fs-light);
+
+        .icon {
+          padding-right:0.5rem;
+          color: $white;
+
+          &:hover {
+            color: $orange;
+            transition: all 0.5s ease-out;
+          }
+
+          i {
+            margin-right:0.5rem;
+          }
+        }
+      }
+    }
   }
 
   &__tag {
     position:absolute;
-    width: auto;
+    width: 5rem;
     top: 0;
     left: 0;
 
     img {
-
+      height: 100%;
     }
+  }
+  &__info {
+    @include flex($direction: row, $align: center, $justify: center, $gap:2rem);
+    display: none;
+    position:absolute;
+    height:50px;
+    bottom: 9rem;
+    left: 0;
+    right: 0;
+    background-color: $black;
   }
 
   &__item {
@@ -30,7 +66,9 @@
 
   &__title {
     @include font($textTrans: uppercase, $fs: $fs-sizable);
+    margin-top:1rem;
     width: fit-content;
+
   }
 
   &__content {
@@ -38,8 +76,12 @@
   }
 
   &__cost {
-    @include font($textTrans: uppercase, $fs: $fs-light, $color: $black);
+    @include font($textTrans: uppercase, $fs: $fs-base, $color: rgba($p-gray,0.6));
     text-decoration: line-through;
     margin-left: 1rem;
+
+    sup {
+      text-decoration: none;
+    }
   }
 }
