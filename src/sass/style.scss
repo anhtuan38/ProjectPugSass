@@ -5,12 +5,15 @@
 @import "./base/base";
 
 @import "./layouts/header";
+@import "./layouts/footer";
 
 @import "./components/navbar";
 @import "./components/dropdown";
 @import "./components/title";
 @import "./components/button";
 @import "./components/product";
-@import "./pages/index";
+@import "./components/card-blog";
+@import "./components/breadcrumb";
 
-@import "./layouts/footer";
+@import "./pages/index";
+@import "./pages/detail.scss";
