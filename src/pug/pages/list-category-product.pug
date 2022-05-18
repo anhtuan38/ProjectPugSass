@@ -1,0 +1,16 @@
+
+extend ../base/base.pug
+block variables
+  - const current="/list-category-product.html"
+  - const title = "List Product"
+
+block title
+    title= title + " | Drink Website"
+
+
+block main
+  .container
+    section
+      +breadcrumb("Trang chủ", "Sản phẩm", "Rượu vang đỏ")
+    section.banner
+      img(src="./assets/images/list-image1.jpg", alt="banner")
