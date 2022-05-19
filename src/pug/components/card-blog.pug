@@ -1,18 +1,11 @@
--
-    const newsTitle = "Vang thăng long classic"
--
-    const newsDescription = "Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai đung tích 750ml."
--
-    const newsTime = "Đăng bởi Giangle | 30/06/2015 | 60 bình luận"
-
-mixin cardBlog({src:src, alt:alt})
-  .card-container
-    .card-blog
-      img(src=src, alt=alt)
-      i.fas.fa-link
-    .card-blog__content.mt-4
-      h3.card-blog__title=newsTitle
-      p.card-blog__time=newsTime
-      p.card-blog__description=newsDescription
-      a(href="#" class="read-more") Read more
-
+mixin cardBlog({ data })
+  each item in data
+    .card-container
+      .card-blog
+        img(src= item.src, alt="photo1")
+        i.fas.fa-link
+      .card-blog__content.mt-4
+        h3.card-blog__title= item.newsTitle
+        p.card-blog__time= item.newsTime
+        p.card-blog__description= item.newsDescription
+        a(href="#" class="read-more") Read more
