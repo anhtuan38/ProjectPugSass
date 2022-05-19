@@ -42,10 +42,12 @@
   }
 
   &__info {
-    @include flex($direction: row,
+    @include flex(
+      $direction: row,
       $align: center,
       $justify: center,
-      $gap: 2rem);
+      $gap: 2rem
+    );
     display: none;
     position: absolute;
     height: 50px;

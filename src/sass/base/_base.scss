@@ -57,3 +57,11 @@
     @include tag($type: "hot");
   }
 }
+
+.read-more {
+  @include mg($y: 1rem);
+  @include font($fs: $fs-light, $color: rgba($p-gray, 0.7));
+  &:hover {
+    color: $orange;
+  }
+}

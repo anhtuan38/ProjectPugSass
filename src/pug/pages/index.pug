@@ -8,7 +8,7 @@ block title
     title= title + " | Drink Website"
 
 block carousel
-  +carousel({ id: 'carousel-banner', data: banner })
+  +carousel({ id: 'carousel-banner', data: banner, isBanner: true })
 
 block main
   main.main-container
@@ -55,12 +55,15 @@ block main
         h1.introduction__title Sản phẩm bán chạy
         .product__item
           +products({ products: newProducts })
-    section.news-and-custom.container
-      .news-container
-        h1.introduction__title Tin tức &amp; blog
-        .blog-container
-          +news-home({ src: "./assets/images/home-image10.jpg", alt: "blog image" })
-          +news-home({ src: "./assets/images/home-image11.jpg", alt: "blog image" })
+    section.container
+      .row
+        .news-container.col-8
+          h1.introduction__title Tin tức &amp; blog
+          .blog-container
+            +cardBlog({ data: cardData })
+            +cardBlog({ data: cardData })
 
-      .custom-container
-        h1.introduction__title khách hàng
+        .customer.col-4
+          h1.introduction__title khách hàng
+          .customer__content
+            +carousel({id:"client", data: carouselClient, isBanner:false})

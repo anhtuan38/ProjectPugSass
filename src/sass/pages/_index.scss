@@ -1,5 +1,4 @@
 .main-container {
-  height: 1000px;
   background: url("/assets/images/bg-left.jpg") no-repeat left top,
     url("/assets/images/bg-right.jpg") no-repeat right top;
   background-repeat: no-repeat;
@@ -11,7 +10,6 @@
     .button {
       @include mg($y: 2rem);
     }
-
 
     &__description {
       text-align: center;
@@ -28,6 +26,7 @@
       & > img {
         width: 100%;
       }
+
       .detail__image {
         position: absolute;
         top: 0;
@@ -60,11 +59,12 @@
     }
 
     .time {
-      @include flex($wrap: wrap);
+      display: flex;
+      flex-wrap: wrap;
       max-width: 100%;
       text-align: center;
 
-      &--item {
+      &-detail {
         @include pd($y: 2rem);
         @include font(
           $textTrans: uppercase,
@@ -74,7 +74,6 @@
         );
         border: 1px solid $orange;
         width: 50%;
-
       }
     }
   }
@@ -117,30 +116,60 @@
         position: absolute;
         top: 0;
         left: 0;
+        bottom: 0;
+        right: 0;
         opacity: 0;
       }
     }
   }
 }
 
-.news-and-custom {
-  @include flex();
+.customer {
+  @include pd($x: 2rem);
 
-  .news-container {
-    width: 66%;
+  &__content {
+    @include flex($align: center, $direction: column, $justify: center);
+  }
 
-    .blog-container {
-      @include flex($direction: row);
-      width: 45%;
-
-      img {
-        width: 100%;
-        height: auto;
-      }
+  &__quote {
+    @include flex($align: center, $direction: column, $justify: center);
+  }
+  &__description {
+    @include font($color: rgba($p-gray, 0.9), $fs: $fs-light, $fw: $fw-regular);
+    p {
+      line-height: 2;
     }
- }
+  }
 
- .custom-container {
-    width: 33%;
- }
+  &__avatar {
+    position: relative;
+    left: 30%;
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    border-radius: 0.7rem;
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .read-more {
+    display: block;
+    text-align: center;
+  }
+
+  &-job {
+    @include flex($align: center, $direction: column, $justify: center);
+    @include font($fs: $fs-light, $fw: $fw-light);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .carousel-indicators {
+    color: black;
+    bottom: -10%;
+  }
 }
