@@ -124,65 +124,52 @@
   }
 }
 
-.news-and-custom {
-  @include flex();
+.customer {
+  @include pd($x: 2rem);
 
-  .news-container {
-    width: 66%;
+  &__content {
+    @include flex($align: center, $direction: column, $justify: center);
   }
 
-  .customer {
-    width: 34%;
-    @include pd($x: 2rem);
-
-    &__content {
-      @include flex($align: center, $direction: column);
+  &__quote {
+    @include flex($align: center, $direction: column, $justify: center);
+  }
+  &__description {
+    @include font($color: rgba($p-gray, 0.9), $fs: $fs-light, $fw: $fw-regular);
+    p {
+      line-height: 2;
     }
+  }
 
-    &__description {
-      @include font(
-        $color: rgba($p-gray, 0.9),
-        $fs: $fs-light,
-        $fw: $fw-regular
-      );
-      p {
-        line-height: 2;
-      }
+  &__avatar {
+    position: relative;
+    left: 30%;
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    border-radius: 0.7rem;
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
+  }
 
-    &__avatar {
-      position: relative;
-      width: 8rem;
-      height: 8rem;
-      overflow: hidden;
-      border-radius: 0.7rem;
+  .read-more {
+    display: block;
+    text-align: center;
+  }
 
-      img {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-    }
+  &-job {
+    @include flex($align: center, $direction: column, $justify: center);
+    @include font($fs: $fs-light, $fw: $fw-light);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
 
-    .read-more {
-      display: block;
-      text-align: center;
-    }
-
-    &-job {
-      @include font($fs: $fs-light, $fw: $fw-light);
-      font-style: italic;
-      margin-top: 0.5rem;
-    }
-
-    button {
-      border: none;
-      background-color: transparent;
-      margin: 1rem 0.1rem 0 0;
-      font-size: 0.7rem;
-      &:nth-child(1) {
-        color: $orange;
-      }
-    }
+  .carousel-indicators {
+    color: black;
+    bottom: -10%;
   }
 }
