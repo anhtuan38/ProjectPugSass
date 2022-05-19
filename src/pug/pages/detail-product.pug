@@ -27,7 +27,7 @@ block main
               img(src="/assets/images/Product/10.jpg", alt="detail images")
           .detail__product.col-md-6
               .detail__title
-                h1.main-heading Rượu nho năm 1987
+                h2.main-heading Rượu nho năm 1987
                 p.main-price.mt-5 300.000
                   sup đ
               .detail__rating
@@ -87,10 +87,10 @@ block main
                       p(class="tab-pane fade show active" style='text-indent: 1rem' id=itemDesc.id role="tabpanel" aria-labelledby=`${itemDesc.id}-tab`)=itemDesc.source
                   else
                       p( class="tab-pane fade" id=itemDesc.id style='text-indent: 1rem' role="tabpanel" aria-labelledby=`${itemDesc.id}-tab`)=itemDesc.source
-        .img-wrapper.pl-5
+        .img-wrapper
           img(src="/assets/images/home-image7.jpg", alt="detail images")
           img(src="/assets/images/ruounho.png", class="image-hover" alt="hover-img")
       .product
-        h1.introduction__title Sản phẩm liên quan
+        h2.introduction__title Sản phẩm liên quan
         .product__item
           +products({ products: newProducts })

@@ -9,7 +9,7 @@ block title
     title= title + " | Drink Website"
 
 block carousel
-  +carousel({ id: 'carousel-banner', data: banner })
+  +carousel({ id: 'carousel-banner', data: banner, isBanner: true })
 
 block main
   main.main-container
@@ -24,7 +24,7 @@ block main
             .detail__image
                 img(src="./assets/images/Product/14.jpg" alt="product 14")
             .detail__content
-                h1.main-heading Rượu nho năm 1987
+                h2.main-heading Rượu nho năm 1987
                 p.main-price.mt-5 300.000
                   sup đ
                 button.button add to cart
@@ -40,7 +40,7 @@ block main
                         span giây
     section.container
       .product__container
-        h1.introduction__title Sản phẩm mới
+        h2.introduction__title Sản phẩm mới
         .product__item
           +products({ products: newProducts })
 
@@ -53,29 +53,18 @@ block main
                   img(src="/assets/images/hover1.png", alt="collection hover")
     section.container
       .product
-        h1.introduction__title Sản phẩm bán chạy
+        h2.introduction__title Sản phẩm bán chạy
         .product__item
           +products({ products: newProducts })
-    section.news-and-custom.container
-      .news-container
-        h1.introduction__title Tin tức &amp; blog
-        .blog-container
-          +cardBlog({ src: "./assets/images/home-image10.jpg", alt: "blog image" })
-          +cardBlog({ src: "./assets/images/home-image11.jpg", alt: "blog image" })
+    section.container
+      .row
+        .news-container.col-8
+          h2.introduction__title Tin tức &amp; blog
+          .blog-container
+            +cardBlog({ data: cardData })
+            +cardBlog({ data: cardData })
 
-      .customer
-        h1.introduction__title khách hàng
-        .customer__content
-            .customer__quote
-                img(src="/assets/images/quote-icon.png", alt="customer image")
-            .customer__description.mt-3
-                p.text-center Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
-                a(href="#" class="read-more") Read more
-            .customer__avatar
-                img(src="/assets/images/home-image12.jpg", alt="customer image")
-            p.product__title giang lt
-            span.customer-job Graphic design
-            span
-              button.i.fa-solid.fa-circle
-              button.i.fa-solid.fa-circle
-              button.i.fa-solid.fa-circle
+        .customer.col-4
+          h2.introduction__title khách hàng
+          .customer__content
+            +carousel({id:"client", data: carouselClient, isBanner:false})

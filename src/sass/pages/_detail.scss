@@ -173,8 +173,8 @@
   @include mg($y: 4rem);
   .img-wrapper {
     @include flex($align: center);
+    @include pd($x: 2rem);
     position: relative;
-    width: 60%;
 
     img {
       width: 100%;
@@ -185,11 +185,12 @@
       transition: $transition;
     }
     .image-hover {
+      cursor: pointer;
       width: 50%;
       height: 30%;
       position: absolute;
       top: 35%;
-      left: 30%;
+      left: 25%;
       opacity: 0;
     }
   }
