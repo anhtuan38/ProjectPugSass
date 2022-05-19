@@ -27,7 +27,7 @@ block main
               img(src="/assets/images/Product/10.jpg", alt="detail images")
           .detail__product.col-md-6
               .detail__title
-                h1.main-heading Rượu nho năm 1987
+                h2.main-heading Rượu nho năm 1987
                 p.main-price.mt-5 300.000
                   sup đ
               .detail__rating
@@ -71,3 +71,26 @@ block main
                   .detail__description
                     p= description
                   img(src="./assets/images/6.png", class="mt-3" alt="logo")
+      .tabs
+        .detail__tabs
+          ul(class="nav nav-tabs" id="nav-tab" role="tablist")
+              each itemContent in tabContent
+                  if(itemContent.isActive)
+                      li(class="nav-item" role="presentation")
+                          a(class="nav-link active" id=`${itemContent.id}-tab` data-toggle="tab" href=`#${itemContent.id}` role="tab" aria-controls=itemContent.id aria-selected="true")=itemContent.name
+                  else
+                      li(class="nav-item")
+                          a(class="nav-link" id=`${itemContent.id}-tab` data-toggle="tab" href=`#${itemContent.id}` role="tab" aria-controls=itemContent.id aria-selected="false")=itemContent.name
+          .tab-content#nav-tab.py-3
+              each itemDesc in tabDesc
+                  if(itemDesc.isActive)
+                      p(class="tab-pane fade show active" style='text-indent: 1rem' id=itemDesc.id role="tabpanel" aria-labelledby=`${itemDesc.id}-tab`)=itemDesc.source
+                  else
+                      p( class="tab-pane fade" id=itemDesc.id style='text-indent: 1rem' role="tabpanel" aria-labelledby=`${itemDesc.id}-tab`)=itemDesc.source
+        .img-wrapper
+          img(src="/assets/images/home-image7.jpg", alt="detail images")
+          img(src="/assets/images/ruounho.png", class="image-hover" alt="hover-img")
+      .product
+        h2.introduction__title Sản phẩm liên quan
+        .product__item
+          +products({ products: newProducts })
