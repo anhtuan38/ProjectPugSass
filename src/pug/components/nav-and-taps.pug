@@ -1,0 +1,28 @@
+mixin navAndTaps({ id, isDetailPage })
+  //- ul(class="nav nav-pills" id= id role="tablist")
+  //-   if isDetailPage
+  //-     each itemContent in tabContent
+  //-         if(itemContent.isActive)
+  //-             li(class="nav-item" role="presentation")
+  //-                 a(class="nav-link active" id=`${itemContent.id}-tab` data-toggle="tab" href=`#${itemContent.id}` role="tab" aria-controls=itemContent.id aria-selected="true")=itemContent.name
+  //-         else
+  //-             li(class="nav-item")
+  //-                 a(class="nav-link" id=`${itemContent.id}-tab` data-toggle="tab" href=`#${itemContent.id}` role="tab" aria-controls=itemContent.id aria-selected="false")=itemContent.name
+  //- .tab-content(id= id).py-3
+  //-   if isDetailPage
+  //-     each itemDesc in tabDesc
+  //-         if(itemDesc.isActive)
+  //-             p(class="tab-pane fade show active" style='text-indent: 1rem' id=itemDesc.id role="tabpanel" aria-labelledby=`${itemDesc.id}-tab`)=itemDesc.source
+  //-         else
+  //-             p( class="tab-pane fade" id=itemDesc.id style='text-indent: 1rem' role="tabpanel" aria-labelledby=`${itemDesc.id}-tab`)=itemDesc.source
+  ul.nav.nav-tabs
+    li.nav-item
+      a.nav-link.active(data-toggle='tab' href='#home') Home
+    li.nav-item
+      a.nav-link(data-toggle='tab' href='#menu1') Menu 1
+    li.nav-item
+      a.nav-link(data-toggle='tab' href='#menu2') Menu 2
+  .tab-content
+    #home.tab-pane.container.active ...
+    #menu1.tab-pane.container.fade ...
+    #menu2.tab-pane.container.fade ...

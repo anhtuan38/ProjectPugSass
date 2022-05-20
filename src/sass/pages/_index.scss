@@ -169,7 +169,17 @@
   }
 
   .carousel-indicators {
-    color: black;
-    bottom: -10%;
+    bottom: -15%;
+    color: $black;
+
+    li {
+      text-indent: 0 !important;
+      list-style-type: disc;
+      font-size: 2rem;
+    }
+
+    .active {
+      color: $orange;
+    }
   }
 }
