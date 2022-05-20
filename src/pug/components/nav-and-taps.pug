@@ -1,28 +1,21 @@
-mixin navAndTaps({ id, isDetailPage })
-  //- ul(class="nav nav-pills" id= id role="tablist")
-  //-   if isDetailPage
-  //-     each itemContent in tabContent
-  //-         if(itemContent.isActive)
-  //-             li(class="nav-item" role="presentation")
-  //-                 a(class="nav-link active" id=`${itemContent.id}-tab` data-toggle="tab" href=`#${itemContent.id}` role="tab" aria-controls=itemContent.id aria-selected="true")=itemContent.name
-  //-         else
-  //-             li(class="nav-item")
-  //-                 a(class="nav-link" id=`${itemContent.id}-tab` data-toggle="tab" href=`#${itemContent.id}` role="tab" aria-controls=itemContent.id aria-selected="false")=itemContent.name
-  //- .tab-content(id= id).py-3
-  //-   if isDetailPage
-  //-     each itemDesc in tabDesc
-  //-         if(itemDesc.isActive)
-  //-             p(class="tab-pane fade show active" style='text-indent: 1rem' id=itemDesc.id role="tabpanel" aria-labelledby=`${itemDesc.id}-tab`)=itemDesc.source
-  //-         else
-  //-             p( class="tab-pane fade" id=itemDesc.id style='text-indent: 1rem' role="tabpanel" aria-labelledby=`${itemDesc.id}-tab`)=itemDesc.source
-  ul.nav.nav-tabs
-    li.nav-item
-      a.nav-link.active(data-toggle='tab' href='#home') Home
-    li.nav-item
-      a.nav-link(data-toggle='tab' href='#menu1') Menu 1
-    li.nav-item
-      a.nav-link(data-toggle='tab' href='#menu2') Menu 2
-  .tab-content
-    #home.tab-pane.container.active ...
-    #menu1.tab-pane.container.fade ...
-    #menu2.tab-pane.container.fade ...
+mixin navAndTaps({ tabs, content, id, isListCategories })
+  ul(class="nav nav-pills" id= id role="tablist")
+    each item in tabs
+      li(class="nav-item"  role="presentation")
+        a(class=`nav-link ${item.isActive ? "active" : ""}` id=`${item.id}-tab` data-toggle="tab" href=`#${item.id}` role="tab" aria-controls= item.id aria-selected="true")
+          if isListCategories
+            i(class= item.name)
+          else
+            = item.name
+  .tab-content(id= id).py-3
+    if !isListCategories
+      each item in content
+        p(class=`tab-pane fade  ${item.isActive ? "show active" : ""}` style='text-indent: 1rem' id=item.id role="tabpanel" aria-labelledby=`${item.id}-tab`)=item.source
+    else
+      each item in content
+        div(class=`tab-pane fade ${item.isActive ? "show active" : ""}` id=item.id role="tabpanel" aria-labelledby=`${item.id}-tab`)
+          if(item.isActive)
+            .tab-content__product
+              +products({ products: listProduct })
+          else
+            +products({ products: newProducts })

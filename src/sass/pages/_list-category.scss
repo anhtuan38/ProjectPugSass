@@ -44,4 +44,16 @@
 
 .list-product {
   margin-top: 3rem;
+  .tab-content {
+    @include flex($justify: space-between, $wrap: wrap);
+    .product__image {
+      width: 30%;
+    }
+    img {
+      width: 100%;
+    }
+    &__product {
+      @include flex($justify: space-between, $gap: 2rem, $wrap: wrap);
+    }
+  }
 }

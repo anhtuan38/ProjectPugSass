@@ -73,7 +73,7 @@ block main
                   img(src="./assets/images/6.png", class="mt-3" alt="logo")
       .tabs
         .detail__tabs
-          +navAndTaps({id: "tabs_product", isDetailPage: true})
+          +navAndTaps({tabs: tabContent, content: tabDesc , id: "tabs_product", isListCategories: false})
         .img-wrapper
           img(src="/assets/images/home-image7.jpg", alt="detail images")
           img(src="/assets/images/ruounho.png", class="image-hover" alt="hover-img")
