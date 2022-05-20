@@ -1,4 +1,4 @@
-mixin products({ products })
+mixin products({ products, isHorizontal })
   each product in products
     .product__image(class= `tag-${product.tag}`)
       img(src=product.urlImage , alt="product image")
@@ -18,5 +18,7 @@ mixin products({ products })
           sup Đ
           del.product__cost= product.cost
             sup Đ
+          if isHorizontal
+            p.intro= description
         button.button add to cart
         p.product__description= product.description

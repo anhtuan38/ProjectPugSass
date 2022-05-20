@@ -3,7 +3,7 @@ extend ../base/base.pug
 block variables
   - const current="/list-category-product.html"
   - const title = "List Product"
-
+  - const description = "Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo."
 block title
     title= title + " | Drink Website"
 
@@ -30,6 +30,6 @@ block main
       .col-9.list-product
         .tab-content
             +navAndTaps({tabs: navProducts, content: navProducts, id: "list-category", isListCategories: true})
-            
+
 
 
