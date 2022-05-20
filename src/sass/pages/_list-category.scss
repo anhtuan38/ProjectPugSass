@@ -46,14 +46,37 @@
   margin-top: 3rem;
   .tab-content {
     @include flex($justify: space-between, $wrap: wrap);
+
     .product__image {
       width: 30%;
     }
+
     img {
       width: 100%;
     }
-    &__product {
+
+    &__product-left {
       @include flex($justify: space-between, $gap: 2rem, $wrap: wrap);
+    }
+
+    &__product-right {
+      @include flex($justify: space-between, $gap: 2rem, $wrap: wrap);
+    }
+
+    .tabs-and-pagination {
+      @include flex($justify: space-between, $align: center);
+      width: 100%;
+      border: 1px solid rgba($p-gray, 0.5);
+    }
+
+    .nav {
+      &-link {
+        color: rgba($p-gray, 0.8);
+      }
+      &-link.active {
+        color: $orange;
+        background-color: $white;
+      }
     }
   }
 }
