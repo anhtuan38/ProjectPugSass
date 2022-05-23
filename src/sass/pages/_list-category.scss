@@ -22,17 +22,24 @@
   .text-compare {
     @include font($fs: $fs-light);
   }
-  .tag__list {
-    @include flex($wrap: wrap);
-    margin-bottom: 2rem;
-  }
+}
 
-  .tag__item {
-    @include pd($x: 0.8rem, $y: 0.5rem);
-    @include font($fs: $fs-light, $color: $p-gray);
-    border: 1px solid rgba($p-gray, 0.8);
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+.tag__list {
+  @include flex($wrap: wrap);
+  margin-bottom: 2rem;
+}
+
+.tag__item {
+  @include pd($x: 0.8rem, $y: 0.5rem);
+  @include font($fs: $fs-light, $color: $p-gray);
+  border: 1px solid rgba($p-gray, 0.8);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    background-color: $orange;
   }
 }
 
