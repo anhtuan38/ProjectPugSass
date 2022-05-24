@@ -7,58 +7,36 @@ block main
     .container.address__container
       +breadcrumb("Trang chủ", "Địa chỉ")
       h2.main-heading địa chỉ
-      .address__form.d-md-flex.mt-3
+      .row.my-5.d-flex-align-items-center
+        h3.address__caption.col-6 địa chỉ của bạn
+        div.col-6
+          a(href="#!") Thêm địa chỉ
+      .address__form
         .address__form-left.w-100
           form
-            h3.form__caption địa chỉ của bạn
-            +form({label: "Tên", id:"nameAddress", type:"text", value:"Giang"})
-            +form({label: "Họ & tên đệm", id:"fullname", type:"text", value:"Lê Anh"})
-            +form({label: "Công ty", id:"company", type:"text", value:"Cổ phần công nghệ DKT"})
-            +form({label: "Địa chỉ", id:"Address", type:"text", value:"Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội"})
-            +form({label: "Thành phố", id:"nameAddress", type:"text", value:"Hà Nội"})
-            +form({label: "Quốc Tịch", id:"nationality", type:"text", value:"Việt Nam"})
-            +form({label: "Postal/Zip Code", id:"zipCode", type:"number", value:"2300089"})
-            +form({label: "Phone", id:"yourPhone", type:"number", value:"0974554928"})
-            +form({label: "Đặt làm địa chỉ mặc định", id:"addressCheck", type:"checkbox"})
-            .address__button.d-md-flex
-              button.button Chỉnh sửa địa chỉ
-              button.button Xóa
+            each item in formData
+              +form(item)
+            .form-rows
+              .form-group.col-sm-12.offset-sm-3
+                button.button.active Chỉnh sửa địa chỉ
+                button.button Xóa
         .address__form--left.w-100
-          +form({label: "Tên", id:"nameAddress", type:"text", value:"Giang"})
-          +form({label: "Họ & tên đệm", id:"fullname", type:"text", value:"Lê Anh"})
-          +form({label: "Công ty", id:"company", type:"text", value:"Cổ phần công nghệ DKT"})
-          +form({label: "Địa chỉ", id:"Address", type:"text", value:"Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội"})
-          +form({label: "Thành phố", id:"nameAddress", type:"text", value:"Hà Nội"})
-          +form({label: "Quốc Tịch", id:"nationality", type:"text", value:"Việt Nam"})
-          +form({label: "Postal/Zip Code", id:"zipCode", type:"number", value:"2300089"})
-          +form({label: "Phone", id:"yourPhone", type:"number", value:"0974554928"})
-          +form({label: "Đặt làm địa chỉ mặc định", id:"addressCheck", type:"checkbox"})
           form
-            a.form__link Thêm địa chỉ
-            .address__button.d-md-flex
-              button.button Chỉnh sửa địa chỉ
-              button.button Xóa
+            each item in formData
+              +form(item)
+            .form-rows
+              .form-group.col-sm-12.offset-sm-3
+                button.button.active Chỉnh sửa địa chỉ
+                button.button Xóa
       .address__info.col-md-6
         form
-          +form({label: "Tên", id:"nameAddress", type:"text", value:"Giang"})
-          +form({label: "Họ & tên đệm", id:"fullname", type:"text", value:"Lê Anh"})
-          +form({label: "Công ty", id:"company", type:"text", value:"Cổ phần công nghệ DKT"})
-          +form({label: "Địa chỉ", id:"Address", type:"text", value:"Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội"})
-          +form({label: "Thành phố", id:"nameAddress", type:"text", value:"Hà Nội"})
-          +form({label: "Quốc Tịch", id:"nationality", type:"text", value:"Việt Nam"})
-          +form({label: "Postal/Zip Code", id:"zipCode", type:"number", value:"2300089"})
-          +form({label: "Phone", id:"yourPhone", type:"number", value:"0974554928"})
-          .address__link.text-right
+          each item in formDataEdit
+            +form(item)
+          .address__link.text-end
             a(href="#!") Chỉnh sửa địa chỉ
       .address__info.col-md-6
         form
-          +form({label: "Tên", id:"nameAddress", type:"text", value:"Giang"})
-          +form({label: "Họ & tên đệm", id:"fullname", type:"text", value:"Lê Anh"})
-          +form({label: "Công ty", id:"company", type:"text", value:"Cổ phần công nghệ DKT"})
-          +form({label: "Địa chỉ", id:"Address", type:"text", value:"Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội"})
-          +form({label: "Thành phố", id:"nameAddress", type:"text", value:"Hà Nội"})
-          +form({label: "Quốc Tịch", id:"nationality", type:"text", value:"Việt Nam"})
-          +form({label: "Postal/Zip Code", id:"zipCode", type:"number", value:"2300089"})
-          +form({label: "Phone", id:"yourPhone", type:"number", value:"0974554928"})
-          .address__link.text-right
-            a(href="#") Chỉnh sửa địa chỉ
+          each item in formDataEdit
+            +form(item)
+          .address__link.text-end
+            a(href="#!") Chỉnh sửa địa chỉ
