@@ -70,3 +70,9 @@ header {
     }
   }
 }
+
+header {
+  @include respond-to(tablet-and-down) {
+    // display: none;
+  }
+}

@@ -90,3 +90,9 @@
     @include font($fs: $fs-light, $color: $p-gray);
   }
 }
+
+footer {
+  @include respond-to(tablet-and-down) {
+    display: none;
+  }
+}

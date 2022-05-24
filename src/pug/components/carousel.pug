@@ -1,5 +1,5 @@
 mixin carousel({ data, id, isBanner })
-  .carousel.slide(id=id data-bs-ride='carousel')
+  .carousel.slide(id=id data-ride='carousel')
     .carousel-inner
       each item,index in data
         if isBanner
@@ -17,10 +17,6 @@ mixin carousel({ data, id, isBanner })
             p.product__title= item.author
             span.customer-job= item.job
     .carousel-indicators
-      li.active(data-bs-target=`#${id}` data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
-      li(data-bs-target=`#${id}` data-bs-slide-to='1' aria-label='Slide 2')
-      li(data-bs-target=`#${id}` data-bs-slide-to='2' aria-label='Slide 3')
-    //- ol.carousel-indicators
-    //-   li.active(data-target=`#${id}` data-slide-to='0' aria-label='Slide 1')
-    //-   li(data-target=`#${id}` data-slide-to='1' aria-label='Slide 2')
-    //-   li(data-target=`#${id}` data-slide-to='2' aria-label='Slide 3')
+      li.active(data-target=`#${id}` data-slide-to='0' aria-current='true' aria-label='Slide 1')
+      li(data-target=`#${id}` data-slide-to='1' aria-label='Slide 2')
+      li(data-target=`#${id}` data-slide-to='2' aria-label='Slide 3')
