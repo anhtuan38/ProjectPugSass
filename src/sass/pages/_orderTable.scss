@@ -9,9 +9,7 @@
       @include font($color: $p-gray, $fs: $fs-light);
     }
   }
-  &__content {
-    @include flex($gap: 2rem);
-  }
+
   .order__title {
     @include font($textTrans: uppercase, $fs: $fs-sizable, $fw: $fw-regular);
   }

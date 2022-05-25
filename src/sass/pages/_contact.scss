@@ -1,12 +1,8 @@
 .contact {
   color: rgba($p-gray, 0.8);
-  
+
   p {
     line-height: 1.5;
-  }
-
-  &__content {
-    @include flex();
   }
 
   &__item {

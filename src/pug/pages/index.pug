@@ -20,10 +20,10 @@ block main
         | Xem thêm
       .intro__product
         img(src="./assets/images/home-image1.jpg" alt="home image")
-        .intro__details.d-md-flex.d-flex.mx-auto
-          .detail__image
+        .intro__details.row
+          .detail__image.col-md-5
             img(src="./assets/images/Product/14.jpg" alt="product 14")
-          .detail__content
+          .detail__content.col-md-7
             h2.main-heading Rượu nho năm 1987
             p.main-price.mt-5 300.000
               sup đ
@@ -41,30 +41,36 @@ block main
     section.container
       .product__container
         h2.introduction__title Sản phẩm mới
-        .product__item
-          +products({ products: newProducts })
+        .product__item.row
+          each item in newProducts
+            .product__image.col-12.col-sm-6.col-md-6.col-lg-3.mb-3
+              +products({ data: item })
 
     section.collection
       ul.collection__list
         each collectionItem in collectionList
-          li.collection__list--item
+          li.collection__list--item.col-12.col-sm-6.col-md-6.col-lg-3
             img(src=collectionItem.src, alt=collectionItem.alt)
             .item--hover
               img(src="/assets/images/hover1.png" alt="collection hover")
     section.container
       .product
         h2.introduction__title Sản phẩm bán chạy
-        .product__item
-          +products({ products: newProducts })
+        .row
+          each item in newProducts
+            .product__image.col-12.col-sm-6.col-md-6.col-lg-3.mb-3
+              +products({ data: item })
     section.container
       .row
-        .news-container.col-8
+        .news-container.col-12.col-md-12.col-lg-8
           h2.introduction__title Tin tức &amp; blog
-          .blog-container
-            +cardBlog({ data: cardData })
-            +cardBlog({ data: cardData })
+          .blog-container.row
+            .col-12.col-md-6
+              +cardBlog({ data: cardData })
+            .col-12.col-md-6
+              +cardBlog({ data: cardData })
 
-        .customer.col-4
+        .customer.col-12.col-md-12.col-lg-4
           h2.introduction__title khách hàng
           .customer__content
             +carousel({id:"client", data: carouselClient, isBanner:false})

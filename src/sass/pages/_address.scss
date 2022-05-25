@@ -1,9 +1,5 @@
 .address {
-  &__form {
-    @include flex();
-    gap: 2rem;
-  }
-
+  overflow: hidden;
   .active {
     background-color: $blue;
   }

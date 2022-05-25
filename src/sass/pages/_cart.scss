@@ -15,6 +15,10 @@
 
       img {
         width: 6rem;
+
+        @include respond-to(desktop-and-down) {
+          width: 2rem;
+        }
       }
 
       &:nth-child(3),

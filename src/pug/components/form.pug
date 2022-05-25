@@ -4,13 +4,13 @@ mixin form({label, id, type, value, isFormEdit})
       .form-check.form-group.col-sm-12.offset-sm-3
         label(class="col-sm-9 col-form-label")= label
           input(class="form-check-input" type= type  required)
-    if type == "textarea"
-      .row.mb-3
-        label(for=id class="col-sm-3")= label
-        .col-sm-9
-          textarea.form-control(rows="10")
     else
       .row.mb-3
         label.col-sm-3.col-form-label= label
         .col-sm-9
           input.form-control(type= type value= value)
+    if type == "textarea"
+      .row.mb-3
+        label(for=id class="col-sm-3")= label
+        .col-sm-9
+          textarea.form-control(rows="10")

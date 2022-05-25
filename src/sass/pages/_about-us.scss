@@ -10,8 +10,6 @@
     }
 
     &-text {
-      @include mg($x: 2rem);
-
       h3 {
         @include font($fs: $fs-sizable, $textTrans: uppercase);
         margin-bottom: 1rem;

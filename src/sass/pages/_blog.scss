@@ -1,15 +1,5 @@
 .blog {
-  .container {
-    .blog-container {
-      @include flex($wrap: wrap);
-
-      .card-blog {
-        width: 95%;
-
-        &__content {
-          width: 95%;
-        }
-      }
-    }
+  &-container {
+    @include flex($wrap: wrap);
   }
 }

@@ -1,6 +1,4 @@
 .blog-container {
-  @include flex($direction: row, $gap: 2rem);
-
   .card-blog {
     @include flex($direction: column);
     position: relative;
@@ -38,7 +36,7 @@
     &::after {
       position: absolute;
       bottom: -5%;
-      -webkit-transform: rotate(-25deg) translateY(90%);
+      -webkit-transform: rotate(-28deg) translateY(90%);
       transition: $transition;
       content: "";
       background: $p-gray;
@@ -48,7 +46,7 @@
     }
 
     &:hover::after {
-      -webkit-transform: rotate(-25deg) translateY(0);
+      -webkit-transform: rotate(-28deg) translateY(0);
     }
     &__title {
       @include font($textTrans: uppercase, $fs: $fs-sizable);
