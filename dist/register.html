@@ -1,0 +1,213 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="website use pug and scss"/>
+    <meta name="author" content="Phan Anh Tuan"/>
+    <meta name="keywords" content="pug, scss, website, css, html, javascript, jquery, bootstrap, responsive"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__icon d-lg-none d-flex">
+          <label for="user"><i class="far fa-user"></i></label>
+        </div>
+        <ul class="header-navigate">
+          <li class="header-navigate__item"><a class="header-navigate__link" href="/address.html">Tài khoản của tôi</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="order.html">Trạng thái đơn hàng</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="/page404.html">Danh sách ưa thích</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="/cart.html">Giỏ hàng</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="login.html">Đăng nhập</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="register.html">Đăng ký</a></li><span class="cross">-</span>
+        </ul>
+        <div class="header-search">
+          <input type="text" placeholder="Tìm kiếm ở đây ..."/><i class="fa-solid fa-magnifying-glass icon"></i>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper__navbar mt-6">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/"><img src="./assets/images/logo-primary.png" alt="logo"/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon i fa-solid fa-bars"></span></button>
+          <div class="collapse navbar-collapse h-100" id="navbarId">
+            <ul class="navbar-nav ml-auto nav-bar__link">
+              <li class="nav-item active"><a href="/">Trang Chủ</a>
+              </li>
+              <li class="nav-item active"><a href="/">Rượu vang đỏ</a>
+                <div class="dropdown">
+                  <div class="dropdown-menu">
+                    <div class="list__dropdown"><a class="dropdown-item" href="#">RƯỢU NGOẠI</a><a class="dropdown-item" href="#">rượu chivas</a><a class="dropdown-item" href="#">Hàng độc - Rượu độc đáo</a><a class="dropdown-item" href="#">Johnnie walker</a><a class="dropdown-item" href="#">rượu whisky</a><a class="dropdown-item" href="#">rượu renny martin</a><a class="dropdown-item" href="#">rượu glenmorangie </a>
+                    </div>
+                    <div class="list__dropdown"><a class="dropdown-item" href="#">RƯỢU NGOẠI</a><a class="dropdown-item" href="#">rượu chivas</a><a class="dropdown-item" href="#">Hàng độc - Rượu độc đáo</a><a class="dropdown-item" href="#">Johnnie walker</a><a class="dropdown-item" href="#">rượu whisky</a><a class="dropdown-item" href="#">rượu renny martin</a><a class="dropdown-item" href="#">rượu glenmorangie </a>
+                    </div>
+                    <div class="list__dropdown"><a class="dropdown-item" href="#">RƯỢU NGOẠI</a><a class="dropdown-item" href="#">rượu chivas</a><a class="dropdown-item" href="#">Hàng độc - Rượu độc đáo</a><a class="dropdown-item" href="#">Johnnie walker</a><a class="dropdown-item" href="#">rượu whisky</a><a class="dropdown-item" href="#">rượu renny martin</a><a class="dropdown-item" href="#">rượu glenmorangie </a>
+                    </div>
+                    <div class="dropdown-menu__image px-2"><img src="./assets/images/home-image7.jpg" alt="Image Dropdown"/></div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item active"><a href="/list-category-product.html">Rượu trắng</a>
+              </li>
+              <li class="nav-item active"><a href="/detail-product.html">champagne</a>
+              </li>
+              <li class="nav-item active"><a href="/blog-detail.html">Thông tin</a>
+              </li>
+              <li class="nav-item active"><a href="/blog.html">blog</a>
+              </li>
+              <li class="nav-item active"><a href="/contact.html">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <section class="login">
+      <div class="container login__container">
+        <nav class="nav__breadcrumb" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Trang chủ</li>
+            <li class="breadcrumb-item" aria-current="page">Đăng ký</li>
+          </ol>
+        </nav>
+        <div class="login__title">
+          <h2 class="main-heading">Đăng ký</h2>
+          <button class="button">Đăng nhập</button>
+        </div>
+        <div class="login__form">
+          <form>
+            <h3 class="form__caption">thông tin cá nhân</h3>
+            <div class="form-rows">
+              <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Tên trước *</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="email"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-rows">
+              <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Tên sau *</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="email"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-rows">
+              <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Email *</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="email"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-rows">
+              <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Password *</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="password"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2 offset-2"></div>
+              <div class="form-rows">
+                <div class="form-check form-group col-sm-12 offset-sm-3">
+                  <label class="col-sm-9 col-form-label">Đăng ký nhận bản tin
+                    <input class="form-check-input" type="checkbox" required="required"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <h3 class="form__caption">thông tin đăng nhập</h3>
+            <div class="form-rows">
+              <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Mật khẩu *</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="password"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-rows">
+              <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Xác nhận mật khẩu *</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="password"/>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="button mx-3">Gửi</button>
+              <button class="button">Quay lại</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__logo-brand"><img src="./assets/images/footer-image1.jpg" alt="footer image"/></div>
+        <div class="footer__wrapper">
+          <div class="footer__list row">
+            <div class="footer-navigate col-12 col-md-12 col-lg-6 col-xl-2 mt-3">
+              <h5 class="footer__title">Thông tin</h5><a class="footer__item" href="#!">về chúng tôi</a><a class="footer__item" href="#!">giào hàng</a><a class="footer__item" href="#!">cảm nghĩ</a><a class="footer__item" href="#!">lưu trữ</a><a class="footer__item" href="#!">chính sách riêng tư</a>
+            </div>
+            <div class="footer-navigate col-12 col-md-12 col-lg-6 col-xl-2 mt-3">
+              <h5 class="footer__title">Mua hàng</h5><a class="footer__item" href="#!">vận chuyển và trả hàng</a><a class="footer__item" href="#!">mua hàng an toàn</a><a class="footer__item" href="#!">vận quốc tế</a><a class="footer__item" href="#!">liên kết</a><a class="footer__item" href="#!">dịch vụ giảm giá</a>
+            </div>
+            <div class="footer-navigate col-12 col-md-12 col-lg-6 col-xl-4 mt-3">
+              <h5 class="footer__title">gửi email</h5>
+              <p>Gửi email cho chúng tôi để được hỗ trợ</p>
+              <div class="footer__input d-flex">
+                <input type="email" placeholder="Enter your email"/>
+                <div class="button"><a class="button--link" href="#">Gửi</a></div>
+              </div>
+              <div class="footer__icon-social"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-google-plus-g"></i><i class="fa-brands fa-dribbble"></i><i class="fa-brands fa-linkedin-in"></i><i class="fa-solid fa-rss"></i></div>
+            </div>
+            <div class="footer-navigate col-12 col-md-12 col-lg-6 col-xl-4 mt-3">
+              <h5 class="footer__title">Liên hệ</h5>
+              <ul>
+                <li class="d-flex align-items-center"><i class="fa-solid fa-location-dot d-block mr-1"></i>
+                  <p>Tầng 4, Toà nhà Hanoi Group. Sô 442 Đội Cấn, P. Cổng Vị, Q.Ba Đình, Hà Nội</p>
+                </li>
+                <li class="d-flex align-items-center"><i class="fas fa-blender-phone mr-1 d-block"></i>
+                  <p class="mr-1">(04) 6674 2332</p><i class="fas fa-blender-phone mr-1 d-block"></i>
+                  <p class="mr-1">(04) 3786 8904</p>
+                </li>
+                <li class="d-flex align-items-center">
+                  <div class="d-flex align-items-center"><i class="fas fa-blender-phone mr-1 d-block"></i>
+                    <p class="mr-1">(08) 6680 9686</p>
+                  </div>
+                  <div class="d-flex align-items-center"><i class="fas fa-envelope mr-1 d-block"></i>
+                    <p>Support@bizweb.vns</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary">
+        <div class="container footer__copyright">
+          <div class="row justify-content-between">
+            <div class="col-12 col-md-4">&copy; Copyright 2008-2014 DKT Technology JSC</div>
+            <div class="col-12 col-md-4"><img src="./assets/images/footer-image2.jpg" alt="card"/></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
