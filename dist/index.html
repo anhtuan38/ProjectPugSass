@@ -1,0 +1,416 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="website use pug and scss"/>
+    <meta name="author" content="Phan Anh Tuan"/>
+    <meta name="keywords" content="pug, scss, website, css, html, javascript, jquery, bootstrap, responsive"/>
+    <title>Home | Drink Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__icon d-lg-none d-flex">
+          <label for="user"><i class="far fa-user"></i></label>
+        </div>
+        <ul class="header-navigate">
+          <li class="header-navigate__item"><a class="header-navigate__link" href="/address.html">Tài khoản của tôi</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="order.html">Trạng thái đơn hàng</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="/page404.html">Danh sách ưa thích</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="/cart.html">Giỏ hàng</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="login.html">Đăng nhập</a></li><span class="cross">-</span>
+          <li class="header-navigate__item"><a class="header-navigate__link" href="register.html">Đăng ký</a></li><span class="cross">-</span>
+        </ul>
+        <div class="header-search">
+          <input type="text" placeholder="Tìm kiếm ở đây ..."/><i class="fa-solid fa-magnifying-glass icon"></i>
+        </div>
+      </div>
+    </header>
+    <div class="carousel slide" id="carousel-banner" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item data-interval=&quot;100&quot; active" style="--aspect-ratio: 2.6666666666666665"><img class="d-block w-100" src="./assets/images/banner.jpg" alt="photo"/>
+        </div>
+        <div class="carousel-item data-interval=&quot;100&quot; " style="--aspect-ratio: 2.6666666666666665"><img class="d-block w-100" src="./assets/images/banner.jpg" alt="photo"/>
+        </div>
+        <div class="carousel-item data-interval=&quot;100&quot; " style="--aspect-ratio: 2.6666666666666665"><img class="d-block w-100" src="./assets/images/banner.jpg" alt="photo"/>
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <li class="active" data-target="#carousel-banner" data-slide-to="0" aria-current="true" aria-label="Slide 1"></li>
+        <li data-target="#carousel-banner" data-slide-to="1" aria-label="Slide 2"></li>
+        <li data-target="#carousel-banner" data-slide-to="2" aria-label="Slide 3"></li>
+      </div>
+    </div>
+    <div class="wrapper__navbar">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/"><img src="./assets/images/logo-primary.png" alt="logo"/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon i fa-solid fa-bars"></span></button>
+          <div class="collapse navbar-collapse h-100" id="navbarId">
+            <ul class="navbar-nav ml-auto nav-bar__link">
+              <li class="nav-item active"><a href="/">Trang Chủ</a>
+              </li>
+              <li class="nav-item active"><a href="/">Rượu vang đỏ</a>
+                <div class="dropdown">
+                  <div class="dropdown-menu">
+                    <div class="list__dropdown"><a class="dropdown-item" href="#">RƯỢU NGOẠI</a><a class="dropdown-item" href="#">rượu chivas</a><a class="dropdown-item" href="#">Hàng độc - Rượu độc đáo</a><a class="dropdown-item" href="#">Johnnie walker</a><a class="dropdown-item" href="#">rượu whisky</a><a class="dropdown-item" href="#">rượu renny martin</a><a class="dropdown-item" href="#">rượu glenmorangie </a>
+                    </div>
+                    <div class="list__dropdown"><a class="dropdown-item" href="#">RƯỢU NGOẠI</a><a class="dropdown-item" href="#">rượu chivas</a><a class="dropdown-item" href="#">Hàng độc - Rượu độc đáo</a><a class="dropdown-item" href="#">Johnnie walker</a><a class="dropdown-item" href="#">rượu whisky</a><a class="dropdown-item" href="#">rượu renny martin</a><a class="dropdown-item" href="#">rượu glenmorangie </a>
+                    </div>
+                    <div class="list__dropdown"><a class="dropdown-item" href="#">RƯỢU NGOẠI</a><a class="dropdown-item" href="#">rượu chivas</a><a class="dropdown-item" href="#">Hàng độc - Rượu độc đáo</a><a class="dropdown-item" href="#">Johnnie walker</a><a class="dropdown-item" href="#">rượu whisky</a><a class="dropdown-item" href="#">rượu renny martin</a><a class="dropdown-item" href="#">rượu glenmorangie </a>
+                    </div>
+                    <div class="dropdown-menu__image px-2"><img src="./assets/images/home-image7.jpg" alt="Image Dropdown"/></div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item active"><a href="/list-category-product.html">Rượu trắng</a>
+              </li>
+              <li class="nav-item active"><a href="/detail-product.html">champagne</a>
+              </li>
+              <li class="nav-item active"><a href="/blog-detail.html">Thông tin</a>
+              </li>
+              <li class="nav-item active"><a href="/blog.html">blog</a>
+              </li>
+              <li class="nav-item active"><a href="/contact.html">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <main class="main-container">
+      <section class="container introduction">
+        <h1 class="introduction__title">Giới thiệu</h1>
+        <p class="introduction__description">Mriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faciteorum claritatem. Investigtiones demonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putam</p>
+        <button class="button">Xem thêm</button>
+        <div class="intro__product"><img src="./assets/images/home-image1.jpg" alt="home image"/>
+          <div class="intro__details row">
+            <div class="detail__image col-md-5"><img src="./assets/images/Product/14.jpg" alt="product 14"/></div>
+            <div class="detail__content col-md-7">
+              <h2 class="main-heading">Rượu nho năm 1987</h2>
+              <p class="main-price mt-5">300.000<sup>đ</sup></p>
+              <button class="button">add to cart</button>
+              <p class="detail__description">Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.</p>
+              <ul class="time">
+                <li class="time-detail">334 <br><span>ngày</span></li>
+                <li class="time-detail">26<br><span>giờ</span></li>
+                <li class="time-detail">60 <br><span>phút</span></li>
+                <li class="time-detail">15 <br><span>giây</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <div class="product__container">
+          <h2 class="introduction__title">Sản phẩm mới</h2>
+          <div class="product__item row">
+            <div class="product__image col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
+              <div class="tag-sale"><img src="./assets/images/Product/9.jpg" alt="product image"/>
+                <div class="product__info">
+                  <button class="icon"><i class="fa-solid fa-heart"></i>Yêu thích</button>
+                  <button class="icon"><i class="fas fa-signal mr-1"></i>So sánh</button>
+                  <button class="icon"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+                </div>
+              </div>
+              <div class="product__content text-center">
+                <h3 class="product__title">rượu vang đà lạt</h3>
+                <p class="main-price my-3">370.000<sup>Đ</sup>
+                  <del class="product__cost">450.000<sup>Đ</sup></del>
+                </p>
+                <button class="button">add to cart</button>
+                <p class="product__description"></p>
+              </div>
+            </div>
+            <div class="product__image col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
+              <div class="tag-new"><img src="./assets/images/Product/10.jpg" alt="product image"/>
+                <div class="product__info">
+                  <button class="icon"><i class="fa-solid fa-heart"></i>Yêu thích</button>
+                  <button class="icon"><i class="fas fa-signal mr-1"></i>So sánh</button>
+                  <button class="icon"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+                </div>
+              </div>
+              <div class="product__content text-center">
+                <h3 class="product__title">rượu vang đà lạt</h3>
+                <p class="main-price my-3">370.000<sup>Đ</sup>
+                  <del class="product__cost">450.000<sup>Đ</sup></del>
+                </p>
+                <button class="button">add to cart</button>
+                <p class="product__description"></p>
+              </div>
+            </div>
+            <div class="product__image col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
+              <div class="tag-hot"><img src="./assets/images/Product/11.jpg" alt="product image"/>
+                <div class="product__info">
+                  <button class="icon"><i class="fa-solid fa-heart"></i>Yêu thích</button>
+                  <button class="icon"><i class="fas fa-signal mr-1"></i>So sánh</button>
+                  <button class="icon"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+                </div>
+              </div>
+              <div class="product__content text-center">
+                <h3 class="product__title">rượu vang đà lạt</h3>
+                <p class="main-price my-3">370.000<sup>Đ</sup>
+                  <del class="product__cost">450.000<sup>Đ</sup></del>
+                </p>
+                <button class="button">add to cart</button>
+                <p class="product__description"></p>
+              </div>
+            </div>
+            <div class="product__image col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
+              <div class="tag-hot"><img src="./assets/images/Product/12.jpg" alt="product image"/>
+                <div class="product__info">
+                  <button class="icon"><i class="fa-solid fa-heart"></i>Yêu thích</button>
+                  <button class="icon"><i class="fas fa-signal mr-1"></i>So sánh</button>
+                  <button class="icon"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+                </div>
+              </div>
+              <div class="product__content text-center">
+                <h3 class="product__title">rượu vang đà lạt</h3>
+                <p class="main-price my-3">370.000<sup>Đ</sup>
+                  <del class="product__cost">450.000<sup>Đ</sup></del>
+                </p>
+                <button class="button">add to cart</button>
+                <p class="product__description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="collection">
+        <ul class="collection__list">
+          <li class="collection__list--item col-12 col-sm-6 col-md-6 col-lg-3"><img src="./assets/images/home-image2.jpg" alt="collection image"/>
+            <div class="item--hover"><img src="./assets/images/hover1.png" alt="collection hover"/></div>
+          </li>
+          <li class="collection__list--item col-12 col-sm-6 col-md-6 col-lg-3"><img src="./assets/images/home-image3.jpg" alt="collection image"/>
+            <div class="item--hover"><img src="./assets/images/hover1.png" alt="collection hover"/></div>
+          </li>
+          <li class="collection__list--item col-12 col-sm-6 col-md-6 col-lg-3"><img src="./assets/images/home-image4.jpg" alt="collection image"/>
+            <div class="item--hover"><img src="./assets/images/hover1.png" alt="collection hover"/></div>
+          </li>
+          <li class="collection__list--item col-12 col-sm-6 col-md-6 col-lg-3"><img src="./assets/images/home-image5.jpg" alt="collection image"/>
+            <div class="item--hover"><img src="./assets/images/hover1.png" alt="collection hover"/></div>
+          </li>
+          <li class="collection__list--item col-12 col-sm-6 col-md-6 col-lg-3"><img src="./assets/images/home-image6.jpg" alt="collection image"/>
+            <div class="item--hover"><img src="./assets/images/hover1.png" alt="collection hover"/></div>
+          </li>
+          <li class="collection__list--item col-12 col-sm-6 col-md-6 col-lg-3"><img src="./assets/images/home-image7.jpg" alt="collection image"/>
+            <div class="item--hover"><img src="./assets/images/hover1.png" alt="collection hover"/></div>
+          </li>
+          <li class="collection__list--item col-12 col-sm-6 col-md-6 col-lg-3"><img src="./assets/images/home-image8.jpg" alt="collection image"/>
+            <div class="item--hover"><img src="./assets/images/hover1.png" alt="collection hover"/></div>
+          </li>
+          <li class="collection__list--item col-12 col-sm-6 col-md-6 col-lg-3"><img src="./assets/images/home-image9.jpg" alt="collection image"/>
+            <div class="item--hover"><img src="./assets/images/hover1.png" alt="collection hover"/></div>
+          </li>
+        </ul>
+      </section>
+      <section class="container">
+        <div class="product">
+          <h2 class="introduction__title">Sản phẩm bán chạy</h2>
+          <div class="row">
+            <div class="product__image col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
+              <div class="tag-sale"><img src="./assets/images/Product/9.jpg" alt="product image"/>
+                <div class="product__info">
+                  <button class="icon"><i class="fa-solid fa-heart"></i>Yêu thích</button>
+                  <button class="icon"><i class="fas fa-signal mr-1"></i>So sánh</button>
+                  <button class="icon"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+                </div>
+              </div>
+              <div class="product__content text-center">
+                <h3 class="product__title">rượu vang đà lạt</h3>
+                <p class="main-price my-3">370.000<sup>Đ</sup>
+                  <del class="product__cost">450.000<sup>Đ</sup></del>
+                </p>
+                <button class="button">add to cart</button>
+                <p class="product__description"></p>
+              </div>
+            </div>
+            <div class="product__image col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
+              <div class="tag-new"><img src="./assets/images/Product/10.jpg" alt="product image"/>
+                <div class="product__info">
+                  <button class="icon"><i class="fa-solid fa-heart"></i>Yêu thích</button>
+                  <button class="icon"><i class="fas fa-signal mr-1"></i>So sánh</button>
+                  <button class="icon"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+                </div>
+              </div>
+              <div class="product__content text-center">
+                <h3 class="product__title">rượu vang đà lạt</h3>
+                <p class="main-price my-3">370.000<sup>Đ</sup>
+                  <del class="product__cost">450.000<sup>Đ</sup></del>
+                </p>
+                <button class="button">add to cart</button>
+                <p class="product__description"></p>
+              </div>
+            </div>
+            <div class="product__image col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
+              <div class="tag-hot"><img src="./assets/images/Product/11.jpg" alt="product image"/>
+                <div class="product__info">
+                  <button class="icon"><i class="fa-solid fa-heart"></i>Yêu thích</button>
+                  <button class="icon"><i class="fas fa-signal mr-1"></i>So sánh</button>
+                  <button class="icon"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+                </div>
+              </div>
+              <div class="product__content text-center">
+                <h3 class="product__title">rượu vang đà lạt</h3>
+                <p class="main-price my-3">370.000<sup>Đ</sup>
+                  <del class="product__cost">450.000<sup>Đ</sup></del>
+                </p>
+                <button class="button">add to cart</button>
+                <p class="product__description"></p>
+              </div>
+            </div>
+            <div class="product__image col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
+              <div class="tag-hot"><img src="./assets/images/Product/12.jpg" alt="product image"/>
+                <div class="product__info">
+                  <button class="icon"><i class="fa-solid fa-heart"></i>Yêu thích</button>
+                  <button class="icon"><i class="fas fa-signal mr-1"></i>So sánh</button>
+                  <button class="icon"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></button>
+                </div>
+              </div>
+              <div class="product__content text-center">
+                <h3 class="product__title">rượu vang đà lạt</h3>
+                <p class="main-price my-3">370.000<sup>Đ</sup>
+                  <del class="product__cost">450.000<sup>Đ</sup></del>
+                </p>
+                <button class="button">add to cart</button>
+                <p class="product__description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <div class="row">
+          <div class="news-container col-12 col-md-12 col-lg-8">
+            <h2 class="introduction__title">Tin tức &amp; blog</h2>
+            <div class="blog-container row">
+              <div class="col-12 col-md-6">
+                <div class="card-container mt-5">
+                  <div class="card-blog"><img src="./assets/images/home-image10.jpg" alt="photo1"/><i class="fas fa-link"></i></div>
+                  <div class="card-blog__content mt-4">
+                    <h3 class="card-blog__title">Vang thăng long classic</h3>
+                    <p class="card-blog__time">Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+                    <p class="card-blog__description">Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai đung tích 750ml.</p><a class="read-more" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card-container mt-5">
+                  <div class="card-blog"><img src="./assets/images/home-image10.jpg" alt="photo1"/><i class="fas fa-link"></i></div>
+                  <div class="card-blog__content mt-4">
+                    <h3 class="card-blog__title">Vang thăng long classic</h3>
+                    <p class="card-blog__time">Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+                    <p class="card-blog__description">Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai đung tích 750ml.</p><a class="read-more" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="customer col-12 col-md-12 col-lg-4">
+            <h2 class="introduction__title">khách hàng</h2>
+            <div class="customer__content">
+              <div class="carousel slide" id="client" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="customer__quote"><img src="/assets/images/quote-icon.png" alt="customer image"/></div>
+                    <div class="customer__description mt-3">
+                      <p class="text-center">Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...</p><a class="read-more" href="#">Read more</a>
+                    </div>
+                    <div class="customer__avatar"><img src="./assets/images/home-image12.jpg" alt="customer image"/></div>
+                    <p class="product__title"></p><span class="customer-job">Graphic design</span>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="customer__quote"><img src="/assets/images/quote-icon.png" alt="customer image"/></div>
+                    <div class="customer__description mt-3">
+                      <p class="text-center">Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...</p><a class="read-more" href="#">Read more</a>
+                    </div>
+                    <div class="customer__avatar"><img src="./assets/images/home-image12.jpg" alt="customer image"/></div>
+                    <p class="product__title"></p><span class="customer-job">Graphic design</span>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="customer__quote"><img src="/assets/images/quote-icon.png" alt="customer image"/></div>
+                    <div class="customer__description mt-3">
+                      <p class="text-center">Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...</p><a class="read-more" href="#">Read more</a>
+                    </div>
+                    <div class="customer__avatar"><img src="./assets/images/home-image12.jpg" alt="customer image"/></div>
+                    <p class="product__title"></p><span class="customer-job">Graphic design</span>
+                  </div>
+                </div>
+                <div class="carousel-indicators">
+                  <li class="active" data-target="#client" data-slide-to="0" aria-current="true" aria-label="Slide 1"></li>
+                  <li data-target="#client" data-slide-to="1" aria-label="Slide 2"></li>
+                  <li data-target="#client" data-slide-to="2" aria-label="Slide 3"></li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__logo-brand"><img src="./assets/images/footer-image1.jpg" alt="footer image"/></div>
+        <div class="footer__wrapper">
+          <div class="footer__list row">
+            <div class="footer-navigate col-12 col-md-12 col-lg-6 col-xl-2 mt-3">
+              <h5 class="footer__title">Thông tin</h5><a class="footer__item" href="#!">về chúng tôi</a><a class="footer__item" href="#!">giào hàng</a><a class="footer__item" href="#!">cảm nghĩ</a><a class="footer__item" href="#!">lưu trữ</a><a class="footer__item" href="#!">chính sách riêng tư</a>
+            </div>
+            <div class="footer-navigate col-12 col-md-12 col-lg-6 col-xl-2 mt-3">
+              <h5 class="footer__title">Mua hàng</h5><a class="footer__item" href="#!">vận chuyển và trả hàng</a><a class="footer__item" href="#!">mua hàng an toàn</a><a class="footer__item" href="#!">vận quốc tế</a><a class="footer__item" href="#!">liên kết</a><a class="footer__item" href="#!">dịch vụ giảm giá</a>
+            </div>
+            <div class="footer-navigate col-12 col-md-12 col-lg-6 col-xl-4 mt-3">
+              <h5 class="footer__title">gửi email</h5>
+              <p>Gửi email cho chúng tôi để được hỗ trợ</p>
+              <div class="footer__input d-flex">
+                <input type="email" placeholder="Enter your email"/>
+                <div class="button"><a class="button--link" href="#">Gửi</a></div>
+              </div>
+              <div class="footer__icon-social"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-google-plus-g"></i><i class="fa-brands fa-dribbble"></i><i class="fa-brands fa-linkedin-in"></i><i class="fa-solid fa-rss"></i></div>
+            </div>
+            <div class="footer-navigate col-12 col-md-12 col-lg-6 col-xl-4 mt-3">
+              <h5 class="footer__title">Liên hệ</h5>
+              <ul>
+                <li class="d-flex align-items-center"><i class="fa-solid fa-location-dot d-block mr-1"></i>
+                  <p>Tầng 4, Toà nhà Hanoi Group. Sô 442 Đội Cấn, P. Cổng Vị, Q.Ba Đình, Hà Nội</p>
+                </li>
+                <li class="d-flex align-items-center"><i class="fas fa-blender-phone mr-1 d-block"></i>
+                  <p class="mr-1">(04) 6674 2332</p><i class="fas fa-blender-phone mr-1 d-block"></i>
+                  <p class="mr-1">(04) 3786 8904</p>
+                </li>
+                <li class="d-flex align-items-center">
+                  <div class="d-flex align-items-center"><i class="fas fa-blender-phone mr-1 d-block"></i>
+                    <p class="mr-1">(08) 6680 9686</p>
+                  </div>
+                  <div class="d-flex align-items-center"><i class="fas fa-envelope mr-1 d-block"></i>
+                    <p>Support@bizweb.vns</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary">
+        <div class="container footer__copyright">
+          <div class="row justify-content-between">
+            <div class="col-12 col-md-4">&copy; Copyright 2008-2014 DKT Technology JSC</div>
+            <div class="col-12 col-md-4"><img src="./assets/images/footer-image2.jpg" alt="card"/></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
