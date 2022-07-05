@@ -1,18 +1,28 @@
 header {
-  @include flex($justify: space-between, $align: center);
   @include pd($y: 1rem);
-  font-size: $fs-light;
+  @include respond-to(desktop-and-down) {
+    @include pd($y: 1rem, $x: 2rem !important);
+  }
+  position: fixed;
+  z-index: $z-sticky;
   top: 0;
   left: 0;
   right: 0;
-  position: fixed;
-  z-index: $z-sticky;
+  font-size: $fs-light;
+  background-color: $white;
+
+  .container {
+    @include flex($justify: space-between, $align: center);
+  }
 
   .header-navigate {
-    @include flex($gap: auto);
+    @include flex();
+    @include respond-to(desktop-and-down) {
+      display: none;
+    }
 
     &__item {
-      @include mg($x: 1rem);
+      margin-right: 1rem;
       position: relative;
 
       &:hover {
@@ -29,7 +39,7 @@ header {
       }
     }
     &__link {
-      color: $white;
+      color: $p-gray;
 
       &:first-child {
         margin-left: 0;
@@ -53,9 +63,9 @@ header {
   }
 
   .header-search {
+    width: fit-content;
     & > input {
       @include pd($x: 0.5rem, $y: 0.2rem);
-      color: $white;
       background-color: transparent;
       border: none;
       border-left: 1px solid $p-gray;
@@ -66,7 +76,12 @@ header {
     }
 
     .icon {
-      color: $white;
+      color: $p-gray;
     }
   }
+}
+
+.header__icon {
+  color: $p-gray;
+  cursor: pointer;
 }

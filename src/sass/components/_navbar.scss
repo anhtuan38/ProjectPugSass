@@ -3,8 +3,22 @@
     background-color: $black;
     width: 100%;
 
+    .navbar-toggler-icon {
+      @include font($fs: $fs-large);
+      color: $orange;
+    }
+
     .navbar {
       padding: 0;
+      &-brand {
+        @include respond-to(tablet-and-down) {
+          height: 7rem;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
     }
 
     .nav-item {
@@ -25,11 +39,19 @@
     }
 
     .nav-bar__link {
-      width: 100%;
       @include flex($justify: space-between);
+      @include respond-to(desktop-and-down) {
+        @include flex($direction: column);
+      }
+      transition: $transition;
+      width: 100%;
 
       .nav-item {
-        @include pd($x: 5rem, $y: "auto");
+        @include pd($x: 5rem, $y: auto);
+        @include respond-to(desktop-and-down) {
+          @include mg($y: 1rem);
+        }
+
         &:hover .dropdown {
           display: block;
         }

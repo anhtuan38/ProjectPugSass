@@ -1,10 +1,17 @@
 .product {
   &__container {
-    margin-top: 25rem;
+    margin-top: 26rem;
+    @include respond-to(desktop-and-down) {
+      margin-top: 0;
+    }
   }
 
   &__image {
     cursor: pointer;
+
+    img {
+      width: 100%;
+    }
 
     &:hover {
       color: $orange;
@@ -51,15 +58,13 @@
     display: none;
     position: absolute;
     height: 50px;
-    bottom: 9rem;
+    bottom: 0;
     left: 0;
     right: 0;
     background-color: $black;
   }
 
   &__item {
-    @include flex($justify: space-between, $direction: row, $gap: 1rem);
-
     img {
       width: 100%;
     }
@@ -68,17 +73,14 @@
   &__title {
     @include font($textTrans: uppercase, $fs: $fs-sizable);
     margin-top: 1rem;
-    width: fit-content;
-  }
-
-  &__content {
-    @include flex($align: center, $direction: column);
   }
 
   &__cost {
-    @include font($textTrans: uppercase,
+    @include font(
+      $textTrans: uppercase,
       $fs: $fs-base,
-      $color: rgba($p-gray, 0.6));
+      $color: rgba($p-gray, 0.6)
+    );
     text-decoration: line-through;
     margin-left: 1rem;
 

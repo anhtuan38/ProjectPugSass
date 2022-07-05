@@ -4,8 +4,10 @@
   display: none;
 
   .dropdown-menu {
+    @include respond-to(desktop-and-down) {
+      flex-wrap: wrap;
+    }
     @include flex($align: center);
-    @include pd($x: 1rem, $y: 1rem);
     border: 1px solid $orange;
     border-radius: 0;
 

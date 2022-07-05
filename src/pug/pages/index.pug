@@ -6,7 +6,7 @@ block variables
   - const description = "Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo."
 
 block title
-    title= title + " | Drink Website"
+  title= title + " | Drink Website"
 
 block carousel
   +carousel({ id: 'carousel-banner', data: banner, isBanner: true })
@@ -19,52 +19,58 @@ block main
       button.button
         | Xem thêm
       .intro__product
-        img(src="./assets/images/home-image1.jpg", alt="home image")
-        .intro__details.d-md-flex.d-flex.mx-auto
-            .detail__image
-                img(src="./assets/images/Product/14.jpg" alt="product 14")
-            .detail__content
-                h2.main-heading Rượu nho năm 1987
-                p.main-price.mt-5 300.000
-                  sup đ
-                button.button add to cart
-                p.detail__description= description
-                ul.time
-                    li.time-detail 334 <br>
-                        span ngày
-                    li.time-detail 26<br>
-                        span giờ
-                    li.time-detail 60 <br>
-                        span phút
-                    li.time-detail 15 <br>
-                        span giây
+        img(src="./assets/images/home-image1.jpg" alt="home image")
+        .intro__details.row
+          .detail__image.col-md-5
+            img(src="./assets/images/Product/14.jpg" alt="product 14")
+          .detail__content.col-md-7
+            h2.main-heading Rượu nho năm 1987
+            p.main-price.mt-5 300.000
+              sup đ
+            button.button add to cart
+            p.detail__description= description
+            ul.time
+              li.time-detail 334 <br>
+                span ngày
+              li.time-detail 26<br>
+                span giờ
+              li.time-detail 60 <br>
+                span phút
+              li.time-detail 15 <br>
+                span giây
     section.container
       .product__container
         h2.introduction__title Sản phẩm mới
-        .product__item
-          +products({ products: newProducts })
+        .product__item.row
+          each item in newProducts
+            .product__image.col-12.col-sm-6.col-md-6.col-lg-3.mb-3
+              +products({ data: item })
 
     section.collection
       ul.collection__list
         each collectionItem in collectionList
-            li.collection__list--item
-                img(src=collectionItem.src, alt=collectionItem.alt)
-                .item--hover
-                  img(src="/assets/images/hover1.png", alt="collection hover")
+          li.collection__list--item.col-12.col-sm-6.col-md-6.col-lg-3
+            img(src=collectionItem.src, alt=collectionItem.alt)
+            .item--hover
+              img(src="/assets/images/hover1.png" alt="collection hover")
     section.container
       .product
         h2.introduction__title Sản phẩm bán chạy
-        .product__item
-          +products({ products: newProducts })
+        .row
+          each item in newProducts
+            .product__image.col-12.col-sm-6.col-md-6.col-lg-3.mb-3
+              +products({ data: item })
     section.container
       .row
-        .news-container.col-8
+        .news-container.col-12.col-md-12.col-lg-8
           h2.introduction__title Tin tức &amp; blog
-          .blog-container
-            +cardBlog({ data: cardData })
-            +cardBlog({ data: cardData })
+          .blog-container.row
+            .col-12.col-md-6
+              +cardBlog({ data: cardData })
+            .col-12.col-md-6
+              +cardBlog({ data: cardData })
 
-        .customer.col-4
+        .customer.col-12.col-md-12.col-lg-4
           h2.introduction__title khách hàng
           .customer__content
             +carousel({id:"client", data: carouselClient, isBanner:false})

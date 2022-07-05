@@ -1,5 +1,8 @@
 .main-heading {
   @include font($textTrans: uppercase, $fs: $fs-large);
+  @include respond-to(desktop-and-down) {
+    @include font($fs: $fs-sizable, $textTrans: uppercase);
+  }
   position: relative;
   margin-top: 3rem;
   width: fit-content;
@@ -24,8 +27,6 @@
 }
 
 .detail__image {
-  width: auto;
-
   &::after {
     @include tag($type: "sale");
     background-size: 8rem 8rem;
@@ -35,6 +36,7 @@
 }
 
 .tag-sale {
+  @include flex();
   position: relative;
 
   &::after {
@@ -43,6 +45,7 @@
 }
 
 .tag-new {
+  @include flex();
   position: relative;
 
   &::after {
@@ -51,6 +54,7 @@
 }
 
 .tag-hot {
+  @include flex();
   position: relative;
 
   &::after {
@@ -64,4 +68,8 @@
   &:hover {
     color: $orange;
   }
+}
+
+.carousel {
+  margin-top: 3.5rem;
 }

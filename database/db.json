@@ -1,0 +1,72 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "urlImage" : "./assets/images/Product/1.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    },
+    {
+      "urlImage" : "./assets/images/Product/2.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    },
+    {
+      "urlImage" : "./assets/images/Product/3.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    },
+    {
+      "urlImage" : "./assets/images/Product/4.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    },
+    {
+      "urlImage" : "./assets/images/Product/5.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    }
+    ,
+    {
+      "urlImage" : "./assets/images/Product/6.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    }
+    ,
+    {
+      "urlImage" : "./assets/images/Product/7.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    }
+    ,
+    {
+      "urlImage" : "./assets/images/Product/8.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    }
+    ,
+    {
+      "urlImage" : "./assets/images/Product/9.jpg",
+      "tag": "hot",
+      "title": "rượu vang đà lạt",
+      "discount": "370.000",
+      "cost": "450.000"
+    }
+  ]
+}
